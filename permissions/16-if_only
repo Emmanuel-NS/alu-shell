@@ -1,2 +1,9 @@
 #!/bin/bash
+<<<<<<< HEAD
 find . -name hello -user guillaume -exec sudo chown vincent {} +
+=======
+if [ "$(stat -c "%U" hello)" = "guillaume" ];
+ then
+    sudo chown vincent hello
+fi
+>>>>>>> a0fcc65 (debugging)
