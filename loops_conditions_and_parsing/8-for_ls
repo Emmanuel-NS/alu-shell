@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #this is 8th file
-for file in *; do
-  if [[ -f "$file" && "$file" == *-* ]]; then
-    echo "${file#*-}"
+for item in *; do
+  if [[ ( -f "$item" || -d "$item" ) && "$item" == *-* ]]; then
+    echo "${item#*-}"
   fi
 done
