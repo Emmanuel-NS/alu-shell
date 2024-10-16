@@ -18,12 +18,11 @@ if [[ -e "$file" ]]; then
   fi
   # Check if the file is a directory
   if [[ -d "$file" ]]; then
-    echo "school exists but it’s a directory"
-   # Check if the directory is empty
+    # Check if the directory is empty
     if [[ -z "$(find "$file" -mindepth 1 -print -quit)" ]]; then
-      echo "school directory is empty"
+      echo "school file is empty"
     else
-      echo "school directory is not empty"
+      echo "school file is not empty"
     fi
   fi
 else
