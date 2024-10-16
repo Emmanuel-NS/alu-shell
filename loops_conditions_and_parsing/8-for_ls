@@ -1,4 +1,4 @@
-#!/bin/env bash
+ #!/usr/bin/env bash
 #this is 8th file
 for file in *; do
   if [[ -f "$file" && "$file" == *-* ]]; then
