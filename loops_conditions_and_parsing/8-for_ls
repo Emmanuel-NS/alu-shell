@@ -1,14 +1,15 @@
 #!/usr/bin/env bash
-# Function to list items in the directory
-list_items() {
-  local dir="$1"
-  # Loop through all non-hidden files and directories in the specified directory
-  for item in "$dir"/*; do
-    # Check if the item is a directory or file and contains a dash
-    if [[ -e "$item" && "$item" == *-* ]]; then
-      # Extract and display the part of the name after the first dash
+# Loop through all non-hidden files and directories in the current directory
+for item in *; do
+  # Check if the item exists
+  if [[ -e "$item" ]]; then
+    # Check if the item contains a dash
+    if [[ "$item" == *-* ]]; then
+      # Print the part of the name after the first dash
       echo "${item#*-}"
+    else
+      # Print the full name if there is no dash
+      echo "$item"
     fi
-  done
-}
-list_items "."
+  fi
+done
