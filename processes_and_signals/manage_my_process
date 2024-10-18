@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# This script continuously writes to a file and pauses for 2 seconds between each write.
+
+while true; do
+    echo "I am alive!" >> /tmp/my_process
+    sleep 2
+done
